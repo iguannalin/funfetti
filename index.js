@@ -59,7 +59,7 @@ window.addEventListener("load", () => {
     </script></html>`;
     const blob = new Blob([text], {type: "text/html"});
     const blobUrl = URL.createObjectURL(blob);
-    const wLeft = wx + getRandomInt(window.innerWidth-100, window.innerWidth+100);
+    const wLeft = getRandomInt(wx-200, wx+window.innerWidth+100);
     window.open(blobUrl, '_blank', `popup,width=${10},height=${10},left=${wLeft},top=${base}`);
     window.URL.revokeObjectURL(blobUrl);
   }
